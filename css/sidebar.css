@@ -2,14 +2,15 @@
   sidebar.css
 */
 
+
 .sidebar {
   position: fixed;
-  top: 55px; 
+  top: 55px;
   left: 0;
   bottom: 0;
   width: 74px;
   background-color: white;
-  overflow-y: auto; 
+  overflow-y: auto;
   z-index: 100;
   margin-right: 0px;
 }
@@ -34,4 +35,51 @@
 .sidebar-link div {
   font-family: roboto, arial;
   font-size: 10px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+    position: fixed;
+    top: 55px;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 300;
+    overflow-y: auto;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 55px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 250;
+  }
+
+  .sidebar-overlay.active {
+    display: block;
+  }
+
+  .video-div {
+    margin-left: 0;
+    width: 100%;
+    padding-top: 65px;
+  }
+
+  body {
+    padding-left: 2px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
