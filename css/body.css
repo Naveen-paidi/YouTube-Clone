@@ -1,0 +1,14 @@
+/**
+  body.css 
+*/
+
+body {
+  margin: 0;
+  padding-top: 70px;
+  padding-left: 76px;
+  padding-right: 2px;
+}
+
+.button {
+  cursor: pointer;
+}

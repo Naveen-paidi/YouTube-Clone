@@ -1,0 +1,196 @@
+/**
+  headers.css
+*/
+.header {
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  background-color: white;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(228, 211, 211);
+  z-index: 100;
+  padding: 0 10px;
+}
+
+
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hamburger-menu {
+  height: 24px;
+  cursor: pointer;
+}
+
+.youtube-logo {
+  height: 24px;
+  cursor: pointer;
+}
+
+.middle-section {
+  flex: 1;
+  margin: 0 20px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  font-size: 16px;
+  height: 37px;
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.search-button {
+  height: 40px;
+  width: 60px;
+  background-color: rgb(245, 245, 245);
+  border: 1px solid gray;
+  margin-left: 4px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.search-icon {
+  height: 24px;
+  cursor: pointer;
+}
+
+.voice-search-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(247, 245, 245);
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.voice-search-icon {
+  height: 22px;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+.upload-icon,
+.youtube-apps-icon,
+.notifications-icon {
+  height: 24px;
+  cursor: pointer;
+}
+
+.notifications-icon-container {
+  position: relative;
+}
+
+.notifications-count {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  background-color: red;
+  padding: 2px 5px;
+  border-radius: 25px;
+  font-size: 12px;
+  color: white;
+}
+
+.naveen-icon {
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ================= RESPONSIVENESS ================= */
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .middle-section {
+    margin: 0 10px;
+    max-width: 350px;
+  }
+
+  .search-bar {
+    font-size: 14px;
+  }
+
+  .right-section {
+    gap: 10px;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .middle-section {
+    max-width: 250px;
+  }
+
+  .search-bar {
+    font-size: 14px;
+    height: 34px;
+  }
+
+  .search-button {
+    width: 45px;
+  }
+
+  .voice-search-button {
+    display: none; /* hide voice button on small screens */
+  }
+
+  .right-section {
+    gap: 8px;
+  }
+
+  .upload-icon,
+  .youtube-apps-icon {
+    display: none; /* hide less important icons */
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .middle-section {
+    max-width: 180px;
+  }
+
+  .search-bar {
+    font-size: 12px;
+    padding: 0 6px;
+  }
+
+  .search-button {
+    width: 40px;
+  }
+
+  .right-section {
+    gap: 6px;
+  }
+
+  .notifications-count {
+    font-size: 10px;
+  }
+}
