@@ -178,3 +178,16 @@
   outline: 3px solid rgba(33,150,243,0.18);
   outline-offset: 2px;
 }
+
+.video-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .video-div {
+    grid-template-columns: 1fr;
+  }
+}
