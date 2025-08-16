@@ -72,3 +72,17 @@ searchBar.addEventListener("input", () => {
   const filteredVideos = arr.filter((video) => video.videoCaption.toLowerCase().includes(videoToSearch));
   iterateVideos(filteredVideos);
 });
+
+const hamburger = document.querySelector(".hamburger-menu");
+const sidebar = document.querySelector(".sidebar");
+const overlay = document.querySelector(".sidebar-overlay");
+
+hamburger.addEventListener("click", () => {
+  sidebar.classList.toggle("active");
+  overlay.classList.toggle("active");
+});
+
+overlay.addEventListener("click", () => {
+  sidebar.classList.remove("active");
+  overlay.classList.remove("active");
+});
