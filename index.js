@@ -20,9 +20,12 @@ function iterateVideos(arr) {
     thumbnail.classList.add("thumbnail");
     thumbnail.setAttribute("src", db.thumbnail);
     thumbnailRow.appendChild(thumbnail);
+    thumbnail.addEventListener("click", () => {
+      window.location = "video.html";
+    })
 
     thumbnail.addEventListener("click", () => {
-      alert("Thank you for Clicking on Thumbnail.");
+      alert("Opening the video");
     });
 
     const videoDuration = document.createElement("div");
@@ -69,9 +72,10 @@ iterateVideos(arr);
 
 searchBar.addEventListener("input", () => {
   const videoToSearch = searchBar.value.toLowerCase();
-  const filteredVideos = arr.filter((video) => video.videoCaption.toLowerCase().includes(videoToSearch));
+  const filteredVideos = arr.filter((video) => video.videoCaption.toLowerCase().includes(videoToSearch) || video.channel.toLowerCase().includes(videoToSearch));
   iterateVideos(filteredVideos);
 });
+
 
 const hamburger = document.querySelector(".hamburger-menu");
 const sidebar = document.querySelector(".sidebar");
