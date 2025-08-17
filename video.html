@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: red;
+            color: white;
+        }
+        div {
+            text-align: center;
+            height: 100vh;
+            margin: 0;
+        }
+        button {
+            display: block;
+            background-color: red;
+            border: none;
+            border-radius: 20px;
+            font-size: 2rem;
+            color: white;
+            margin: 20px auto 0;
+            padding: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            opacity: 0.7;
+        }
+        button:active {
+            color: blue;
+        }
+        @media (max-width: 768px) {
+            video {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>YouTube Video</h1>
+        <video src="YT Video.mp4" width="60%" height="65%" controls autoplay></video>
+        <button id="button">Back to YouTube Home Page</button>
+    </div>
+    <script>
+        const backButton = document.getElementById("button");
+        backButton.addEventListener("click", () => {
+            window.location = "index.html";
+        })
+    </script>
+</body>
+</html>
