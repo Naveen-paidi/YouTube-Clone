@@ -24,10 +24,6 @@ function iterateVideos(arr) {
       window.location = "video.html";
     })
 
-    thumbnail.addEventListener("click", () => {
-      alert("Opening the video");
-    });
-
     const videoDuration = document.createElement("div");
     videoDuration.classList.add("video-time");
     videoDuration.innerText = db.duration;
@@ -90,3 +86,4 @@ overlay.addEventListener("click", () => {
   sidebar.classList.remove("active");
   overlay.classList.remove("active");
 });
+
